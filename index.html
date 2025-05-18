@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Localidades Cercanas por Ruta</title>
+  <link rel="stylesheet" href="estilos.css">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- OSRM routing -->
+  <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+
+  <!-- SheetJS para exportar a Excel -->
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+  <div class="contenedor">
+    <!-- Columna izquierda: Mapa -->
+    <div id="map"></div>
+
+    <!-- Columna derecha: Controles y resultados -->
+    <div id="panel">
+      <div id="controls">
+        <label for="sucursal">Sucursal:</label>
+        <select id="sucursal" onchange="mostrarSucursalEnMapa()"></select>
+
+        <label>Desde (km):</label>
+        <input type="number" id="minKm" value="0" min="0" />
+
+        <label>Hasta (km):</label>
+        <input type="number" id="maxKm" value="20" min="1" />
+
+        <button onclick="buscarLocalidades()">Buscar</button>
+        <button id="btnDetener" onclick="detenerBusqueda()" style="display:none;">Detener</button>
+        <button id="btnExportar" onclick="exportarExcel()" style="display: none;">Exportar a Excel</button>
+      </div>
+
+      <div id="loading">Procesando...</div>
+
+      <div id="resultados">
+        <h3>Localidades encontradas:</h3>
+        <ul id="listaLocalidades"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+    "a": { "nombre": "Rosario", "lat": -32.9869312, "lon": -60.7375731 },
+    "b": { "nombre": "Cordoba", "lat": -32.4537445, "lon": -64.4091433 },
+    "c": { "nombre": "Mendoza", "lat": -33.0756723, "lon": -68.8846116 },
+    "d": { "nombre": "Tucuman", "lat": -26.7901314, "lon": -65.2654141 },
+    "e": { "nombre": "Mar del Plata", "lat": -38.0091367, "lon": -57.6261124 },
+    "f": { "nombre": "Salta", "lat": -24.8076073, "lon": -65.4245414},
+    "g": { "nombre": "Bahia Blanca", "lat": -38.7616595, "lon": -62.2832659},
+    "h": { "nombre": "Comodoro Rivadavia", "lat": -45.892728, "lon": -67.5620975}
+  }
+
+

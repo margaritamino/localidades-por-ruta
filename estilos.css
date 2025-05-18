@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+  
+  .contenedor {
+    display: flex;
+    height: 100vh;
+  }
+  
+  #map {
+    flex: 2;
+    height: 100%;
+  }
+  
+  #panel {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #f4f4f4;
+  }
+  
+  #controls,
+  #resultados {
+    margin-bottom: 15px;
+  }
+  
+  #panel label,
+  #panel input,
+  #panel select,
+  #panel button {
+    display: block;
+    margin: 5px 0;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  
+  #loading {
+    font-weight: bold;
+    color: green;
+    display: none;
+  }
+  
+  #listaLocalidades {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #listaLocalidades li {
+    margin-bottom: 5px;
+  }
+  
