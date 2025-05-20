@@ -83,7 +83,7 @@ async function buscarLocalidades() {
   markers.forEach(m => map.removeLayer(m));
   markers = [];
 
-  const overpassUrl = `https://overpass-api.de/api/interpreter?data=[out:json];node[place~"town|village|city"](around:${maxKm * 1000},${suc.lat},${suc.lon});out;`;
+  const overpassUrl = `https://overpass-api.de/api/interpreter?data=[out:json];node[place~"town|village|city"](around:${maxKm * 2000},${suc.lat},${suc.lon});out;`;
   const res = await fetch(overpassUrl);
   const data = await res.json();
 
