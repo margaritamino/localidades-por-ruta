@@ -49,7 +49,7 @@ async function calcularRuta(lat1, lon1, lat2, lon2) {
   const url = `https://router.project-osrm.org/route/v1/driving/${lon1},${lat1};${lon2},${lat2}?overview=false`;
   const res = await fetch(url);
   const data = await res.json();
-  return data.routes?.[0]?.legs?.[0]?.distance / 1000 || null;
+  return data.routes?.[0]?.legs?.[0]?.distance / 2000 || null;
 }
 
 async function obtenerInfoUbicacion(lat, lon) {
